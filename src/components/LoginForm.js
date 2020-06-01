@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { useHistory } from "react-router-dom";
 import { authContext } from '../middlewares/Auth';
 
 const LoginForm = () => {
@@ -7,6 +8,8 @@ const LoginForm = () => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [error, setError] = useState();
+
+    let history = useHistory();
 
     const onFormSubmit = e => {
         e.preventDefault();
@@ -29,9 +32,9 @@ const LoginForm = () => {
                 .then(result => {
                     const res = JSON.parse(result);
                     if(res.ok === true){
-                        // To see the token: sessionStorage.getItem('token');
                         sessionStorage.setItem('token', res.token);
                         setAuthData(res.user.name);
+                        history.push("/");
                     }else{
                         setError(true);
                     }

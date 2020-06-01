@@ -14,8 +14,7 @@ import PrivateRoute from './components/PrivateRoute';
 // Pages
 import { Login } from './pages/Login';
 import Home from './pages/Home';
-
-
+import ListUsers from './pages/ListUsers';
 
 function App({ user }) {
   return (
@@ -23,6 +22,7 @@ function App({ user }) {
       <Router>
         <Switch>
           <Route path="/login" component={Login} />
+          <PrivateRoute path="/list-users" component={ListUsers} />
           <PrivateRoute path="/" component={Home} />
         </Switch>
       </Router>
