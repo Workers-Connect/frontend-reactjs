@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'react-bulma-components/dist/react-bulma-components.min.css';
 import { Navbar } from "react-bulma-components";
 
 export class Header extends Component {

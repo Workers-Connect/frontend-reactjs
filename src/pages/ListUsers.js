@@ -11,12 +11,12 @@ const ListUsers = () => {
             className="d-flex justify-content-center align-items-center"
         >
             <Header user={auth.data}/>
-            <div className="contcontainer is-fluidainer">
-                <div className="notification">
-                <h1 className="text-center">Listado de usuarios</h1>
-                <ListTable entity="usuario" />
+            <section class="section">
+                <div class="container">
+                    <h1>Listado de usuarios</h1>
+                    <ListTable entity="usuario" />
                 </div>
-            </div>
+            </section>
         </div>
     );
 };
