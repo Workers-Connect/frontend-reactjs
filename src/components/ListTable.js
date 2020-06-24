@@ -29,7 +29,7 @@ export class ListTable extends Component {
                         console.log(res.users);
                         this.setState({datas: res.users})
                     }else{
-                        console.log("No devuelve un ok");
+                        console.log(res);
                     }
                     
                 })
